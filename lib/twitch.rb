@@ -66,7 +66,7 @@ class Twitch
 	def getChannelSubscription(user, channel)
 		return false if !@access_token
 		path = "/users/#{user}/subscriptions/#{channel}?oauth_token=#{@access_token}"
-		url = @base_url + path + channel;
+		url = @base_url + path;
 		get(url)
 	end
 
